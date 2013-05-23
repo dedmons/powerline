@@ -18,7 +18,11 @@ def _override_from(config, override_varname):
 		overrides = vim_getvar(override_varname)
 	except KeyError:
 		return config
-	mergedicts(config, overrides)
+	if type(overides) is type('string')
+		import json
+		mergedicts(config, json.loads(overrides))
+	else
+		mergedicts(config, overrides)
 	return config
 
 
